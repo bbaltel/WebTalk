@@ -1,6 +1,14 @@
 # WebTalk
 A simple LAN server and client for communicating with friends
 
+## Dependencies
+
+To run the <code>server.js</code>, you need the module <code>websocket</code>  
+Get it by running
+```bash
+$ sudo npm install websocket
+```
+
 ## Setup:
 ```bash
 $ sudo git clone "https://github.com/bbaltel/WebTalk"
