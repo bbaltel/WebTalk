@@ -35,5 +35,5 @@ $ sudo node server.js
 - [ ] Add commands like kicking users, muting users, etc.
 - [ ] Add emoji support :+1:
 - [ ] Support markdown text
-- [ ] Better frontend
-- [ ] Dark mode
+- [x] Better frontend
+- [x] Dark modes
