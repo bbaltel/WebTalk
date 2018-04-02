@@ -1,5 +1,5 @@
 # WebTalk
-A simple LAN server and client for communicating with friends
+A simple server and client for communicating with friends
 
 ## Dependencies:
 
