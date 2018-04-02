@@ -37,3 +37,4 @@ $ sudo node server.js
 - [ ] Support markdown text
 - [x] Better frontend
 - [x] Dark modes
+- [] Indicator if someone is typing
