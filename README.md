@@ -1,7 +1,7 @@
 # WebTalk
 A simple LAN server and client for communicating with friends
 
-## Dependencies
+## Dependencies:
 
 To run the <code>server.js</code>, you need the module <code>websocket</code>  
 Get it by running
@@ -15,6 +15,12 @@ $ sudo git clone "https://github.com/bbaltel/WebTalk"
 ```
 
 run server.js on one computer for the server, and index.html for the clients
+
+## Running:
+
+```bash
+$ sudo node server.js
+```
 
 ## TODO:
 - [ ] Add commands like kicking users, muting users, etc.
