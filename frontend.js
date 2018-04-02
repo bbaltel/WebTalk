@@ -22,7 +22,7 @@ $(function () {
         return;
     }
     // open connection
-    var connection = new WebSocket('ws://www.baltel.com:8080/');
+    var connection = new WebSocket('ws://www.[YOUR DOMAIN HERE]');
     connection.onopen = function () {
         // first we want users to enter their names
         input.removeAttr('disabled');
