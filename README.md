@@ -27,3 +27,4 @@ $ sudo node server.js
 - [ ] Add emoji support :+1:
 - [ ] Support markdown text
 - [ ] Better frontend
+- [ ] Dark mode

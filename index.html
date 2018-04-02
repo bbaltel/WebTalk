@@ -2,18 +2,49 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css" type="text/css" disabled>
+    <link rel="stylesheet" href="dark.css" type="text/css" >
     <meta name="viewport" content="height=device-height">
     <title>Web Talk</title>
-    <link rel="stylesheet" href="index.css" type="text/css">
+    <script>
+        function change_css(type) {
+            var light_link = document.getElementsByTagName("link")[0];
+            var dark_link = document.getElementsByTagName("link")[1];
+
+            if(type == "dark") {
+                dark_link.removeAttribute("disabled");
+                light_link.setAttribute("disabled", "disabled");
+            }
+
+            else if(type == "light") {
+                light_link.removeAttribute("disabled");
+                dark_link.setAttribute("disabled", "disabled");
+            }
+
+            else {
+                console.log("error! could not find type of style to switch");
+                console.log("expected: light or dark, but got:");
+                console.log(type);
+            }
+
+            console.log("changed theme");
+        }
+    </script>
 </head>
 <body>
     <h1>Welcome to WebTalk</h1>
     <p id="server_name">Server name: admin</p>
+    <br>
     <div id="content"></div>
     <div>
         <span id="status">Connecting...</span>
-        <input type="text" id="input" disabled="disabled" />
+        <form>
+            <input type="text" id="input" disabled="disabled" />
+        </form>
     </div>
+    <br>
+    <button id="style_change" onclick="change_css('dark')">DARK THEME</button>
+    <button id="style_change" onclick="change_css('light')">LIGHT THEME</button>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
     </script>
     <script src="./frontend.js"></script>
