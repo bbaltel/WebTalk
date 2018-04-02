@@ -14,6 +14,15 @@ $ sudo npm install websocket
 $ sudo git clone "https://github.com/bbaltel/WebTalk"
 ```
 
+before you run, you need to edit a few things  
+
+You need to
+
+- Get a domain
+- Get port forwarding set up towards your computer off the domain (on 8080)
+- Edit frontend.js (on line 25) to replace with your domain
+- Give the clients a copy of the <code>index.html</code> and <code>frontend.js</code>
+
 run server.js on one computer for the server, and index.html for the clients
 
 ## Running:
