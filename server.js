@@ -1,4 +1,5 @@
 process.title = 'node-chat';
+
 var webSocketsServerPort = 8080;
 // websocket and http servers
 var webSocketServer = require('websocket').server;
@@ -28,9 +29,6 @@ server.listen(webSocketsServerPort, function () {
     console.log((new Date()) + " Server is listening on port "
         + webSocketsServerPort);
 });
-/**
- * WebSocket server
- */
 var wsServer = new webSocketServer({
     httpServer: server
 });
@@ -39,9 +37,6 @@ var wsServer = new webSocketServer({
 wsServer.on('request', function (request) {
     console.log((new Date()) + ' Connection from origin '
         + request.origin + '.');
-    // accept connection - you should check 'request.origin' to
-    // make sure that client is connecting from your website
-    // (http://en.wikipedia.org/wiki/Same_origin_policy)
     var connection = request.accept(null, request.origin);
     // we need to know client index to remove them on 'close' event
     var index = clients.push(connection) - 1;
@@ -60,7 +55,7 @@ wsServer.on('request', function (request) {
             if (userName === false) {
                 // remember user name
                 userName = htmlEntities(message.utf8Data);
-                // get random color and send it back to the user
+                 // get random color and send it back to the user
                 userColor = colors.shift();
                 connection.sendUTF(
                     JSON.stringify({ type: 'color', data: userColor }));
@@ -70,7 +65,19 @@ wsServer.on('request', function (request) {
                 console.log((new Date()) + ' Received Message from '
                     + userName + ': ' + message.utf8Data);
 
-                // we want to keep history of all sent messages
+                
+                var kickItem = message.utf8Data.replace("::kick ", "")
+                
+                if (kickItem !== message.utf8Data) {
+                    connection.removeListener(kickItem, function () {
+                        console.log(kickItem + " was kicked");
+                    });
+                }
+                else if ("::leave" === message.utf8Data) {
+                    connection.close();
+                }            
+                console.log(kickItem);
+
                 var obj = {
                     time: (new Date()).getTime(),
                     text: htmlEntities(message.utf8Data),
