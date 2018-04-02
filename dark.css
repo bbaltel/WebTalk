@@ -3,17 +3,18 @@
     font-size: 1rem;
     padding: 0px;
     margin: 0px;
-    background-color: blue;
 }
 
 html, body {
     height: 100%;
     overflow: hidden;
+    background: #090909;
 }
 
 h1 {
     font-size: 3rem;
     margin: 5px;
+    padding: 5px;
 }
 
 p {
@@ -21,7 +22,7 @@ p {
 }
 
 #server_name {
-    padding: 5px;
+    padding: 10px;
 }
 
 div {
@@ -55,4 +56,30 @@ div {
     display: block;
     float: left;
     margin-top: 15px;
+}
+
+#wrapper {
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    background: radial-gradient(#414042, black);
+    color: #7e2fb7;
+    font-weight: bold;
+    border-radius: 30px;
+    border-color: black;
+}
+
+#button-wrap {
+    background: transparent;
+    margin: auto;
+    align-items: center;
+}
+
+button {
+    border: none;
+    background: black;
+    color: #7e2fb7;
+    padding: 15px;
+    margin: 5px;
+    font-weight: bolder;
 }

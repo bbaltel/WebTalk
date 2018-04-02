@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="index.css" type="text/css" disabled>
-    <link rel="stylesheet" href="dark.css" type="text/css" >
+    <link rel="stylesheet" href="dark.css" type="text/css">
     <meta name="viewport" content="height=device-height">
     <title>Web Talk</title>
     <script>
@@ -32,21 +32,26 @@
     </script>
 </head>
 <body>
-    <h1>Welcome to WebTalk</h1>
-    <p id="server_name">Server name: admin</p>
-    <br>
-    <div id="content"></div>
-    <div>
-        <span id="status">Connecting...</span>
-        <form>
-            <input type="text" id="input" disabled="disabled" />
-        </form>
+    <br><br>
+    <div id="wrapper">
+        <h1>Welcome to WebTalk</h1>
+        <p id="server_name">Server name: admin</p>
+        <br>
+        <div id="content"></div>
+        <div>
+            <span id="status">Connecting...</span>
+            <form>
+                <input type="text" id="input" disabled="disabled" />
+            </form>
+        </div>
+        <br>
+        <div id="button-wrap">
+            <button id="style_change" onclick="change_css('dark')">DARK THEME</button>
+            <button id="style_change" onclick="change_css('light')">LIGHT THEME</button>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+        </script>
+        <script src="./frontend.js"></script>
     </div>
-    <br>
-    <button id="style_change" onclick="change_css('dark')">DARK THEME</button>
-    <button id="style_change" onclick="change_css('light')">LIGHT THEME</button>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-    </script>
-    <script src="./frontend.js"></script>
 </body>
 </html>
